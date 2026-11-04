@@ -1,24 +1,43 @@
-# Tech Portfolio Showcase
+# Portfólio · Eduardo Vidal
 
-faça um site para ser meu portfolio do  desenvolvedor web fullstack faça ele bem tecnologico
+Site de portfólio de **Eduardo Serra Pierre Vidal**, estudante de Ciência da Computação (UniCEUB), com foco na carreira em desenvolvimento de software e em **segurança de software**.
 
-This project was built with [Lovable](https://lovable.dev).
+## O que tem no site
 
-## Build with Lovable
+- **Projeto em destaque:** plataforma SaaS de saúde mental corporativa (NR-01), em Go, React e PostgreSQL.
+- **Projetos:** sites profissionais no ar, projetos pessoais e acadêmicos, com filtro por categoria.
+- **Sobre:** trajetória na SASBIO (2 anos de estágio e cerca de 6 meses como PJ em desenvolvimento de software) e o foco em segurança de software.
+- **Competências:** linguagens, frameworks, bancos de dados e ferramentas.
+- **Contato:** e-mail, LinkedIn e GitHub.
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/b4c8f742-f96e-444f-8997-fb06788e6e99).
+## Tecnologias
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+HTML, CSS e JavaScript puros, sem frameworks e sem etapa de build.
 
-## Development
+## Executar localmente
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+```bash
+git clone https://github.com/eduspv/portfolio.git
+cd portfolio
+# opção 1: abrir index.html no navegador
+# opção 2: servidor local (requer Node.js)
+npx serve .
 ```
+
+## Estrutura
+
+```
+index.html      página única
+css/style.css   estilos
+js/main.js      interações (menu, filtro, animações)
+assets/images/  imagens
+```
+
+## Histórico
+
+A primeira versão deste portfólio (React, TypeScript e Vite, gerada com Lovable) continua no histórico de commits deste repositório. Esta versão a substitui.
+
+## Contato
+
+- LinkedIn: https://www.linkedin.com/in/eduardo-s-p-vidal/
+- GitHub: https://github.com/eduspv
