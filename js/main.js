@@ -35,13 +35,15 @@
   const header = $('.site-header');
   const btn = $('.menu-btn');
   const menu = $('#menu');
+  const isEn = () => root.lang === 'en';
   const setMenu = (open) => {
     menu.classList.toggle('open', open);
     document.body.classList.toggle('menu-open', open);
     document.body.style.overflow = open ? 'hidden' : '';
     btn.setAttribute('aria-expanded', String(open));
-    btn.textContent = open ? 'Fechar' : 'Menu';
+    btn.textContent = open ? (isEn() ? 'Close' : 'Fechar') : 'Menu';
   };
+  document.addEventListener('langchange', () => setMenu(menu.classList.contains('open')));
   btn.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
   menu.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
   addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });

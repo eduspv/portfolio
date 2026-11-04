@@ -16,9 +16,10 @@
   <link rel="stylesheet" href="css/style.css">
   <script>document.documentElement.classList.add('js');</script>
   <script src="js/main.js" defer></script>
+  <script src="js/i18n.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <a class="skip-link" href="#conteudo" data-i18n="k101">Ir para o conteúdo</a>
   <div class="progress" aria-hidden="true"></div>
 
   <div class="intro" aria-hidden="true">
@@ -28,11 +29,12 @@
   <header class="site-header">
     <a class="logo" href="#inicio" aria-label="Eduardo Vidal, início"><span>EV</span><small>Eduardo<br>Vidal</small></a>
     <nav class="nav" aria-label="Navegação principal">
+      <button class="lang-btn mono" type="button" aria-label="Switch to English"><span data-l="pt" class="on">PT</span><span data-l="en">EN</span></button>
       <ul class="nav-links" id="menu">
-        <li><a href="#destaque">Destaque</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#competencias">Competências</a></li>
-        <li><a class="nav-cta" href="#contato">Contato</a></li>
+        <li><a href="#destaque" data-i18n="k1">Destaque</a></li>
+        <li><a href="#projetos" data-i18n="k2">Projetos</a></li>
+        <li><a href="#competencias" data-i18n="k3">Competências</a></li>
+        <li><a class="nav-cta" href="#contato" data-i18n="k4">Contato</a></li>
       </ul>
       <button class="menu-btn mono" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
     </nav>
@@ -43,15 +45,15 @@
     <section class="hero" id="inicio">
       <div class="hero-grid">
         <div class="hero-copy">
-          <p class="mono eyebrow">Brasília, BR · Ciência da Computação, UniCEUB</p>
+          <p class="mono eyebrow" data-i18n="k5">Brasília, BR · Ciência da Computação, UniCEUB</p>
           <h1 aria-label="Construo software do banco de dados à interface.">
-            <span class="line"><span>Construo software</span></span>
-            <span class="line"><span>do <em>banco de dados</em></span></span>
-            <span class="line"><span>à interface.</span></span>
+            <span class="line"><span data-i18n="k6">Construo software</span></span>
+            <span class="line"><span data-i18n="k7">do <em>banco de dados</em></span></span>
+            <span class="line"><span data-i18n="k8">à interface.</span></span>
           </h1>
-          <p class="lead">Sou <strong>Eduardo Serra Pierre Vidal</strong>, estudante de Ciência da Computação. Gosto de construir projetos completos (frontend, backend e banco) e quero me aprofundar em <strong>segurança de software</strong>.</p>
+          <p class="lead" data-i18n="k9">Sou <strong>Eduardo Serra Pierre Vidal</strong>, estudante de Ciência da Computação. Gosto de construir projetos completos (frontend, backend e banco) e quero me aprofundar em <strong>segurança de software</strong>.</p>
           <div class="cta-row">
-            <a class="pill pill-solid magnetic" href="#projetos">Ver projetos <span aria-hidden="true">↓</span></a>
+            <a class="pill pill-solid magnetic" href="#projetos" data-i18n="k10">Ver projetos <span aria-hidden="true">↓</span></a>
             <a class="pill magnetic" href="https://github.com/eduspv" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
             <a class="pill magnetic" href="https://www.linkedin.com/in/eduardo-s-p-vidal/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
@@ -75,55 +77,55 @@
     <!-- DESTAQUE -->
     <section class="feature" id="destaque">
       <div class="wrap">
-        <p class="mono label reveal">01 — Projeto em destaque</p>
+        <p class="mono label reveal" data-i18n="k11">01 — Projeto em destaque</p>
         <div class="feature-head reveal">
-          <h2>SASBIO<br><em>Saúde Mental Corporativa</em></h2>
-          <p>Plataforma multi-tenant para triagem de riscos psicossociais no trabalho, alinhada à <strong>NR-01</strong>. A empresa contrata um plano, cadastra colaboradores e aplica um questionário; vê apenas indicadores agregados, nunca as respostas individuais.</p>
+          <h2 data-i18n="k12">SASBIO<br><em>Saúde Mental Corporativa</em></h2>
+          <p data-i18n="k13">Plataforma multi-tenant para triagem de riscos psicossociais no trabalho, alinhada à <strong>NR-01</strong>. A empresa contrata um plano, cadastra colaboradores e aplica um questionário; vê apenas indicadores agregados, nunca as respostas individuais.</p>
         </div>
 
         <figure class="arch reveal" aria-label="Diagrama da arquitetura da plataforma">
           <div class="arch-row">
             <div class="node"><b>Frontend</b><span>React 19 · TypeScript · Vite</span></div>
             <i class="arrow" aria-hidden="true">→</i>
-            <div class="node"><b>Middleware</b><span>JWT → papel → plano ativo</span></div>
+            <div class="node"><b>Middleware</b><span data-i18n="k14">JWT → papel → plano ativo</span></div>
             <i class="arrow" aria-hidden="true">→</i>
-            <div class="node"><b>Handler → Service</b><span>regras de negócio (Go · Gin)</span></div>
+            <div class="node"><b>Handler → Service</b><span data-i18n="k15">regras de negócio (Go · Gin)</span></div>
             <i class="arrow" aria-hidden="true">→</i>
-            <div class="node"><b>Repository</b><span>pgx, filtrado por company_id</span></div>
+            <div class="node"><b>Repository</b><span data-i18n="k16">pgx, filtrado por company_id</span></div>
             <i class="arrow" aria-hidden="true">→</i>
-            <div class="node node-db"><b>PostgreSQL</b><span>migrations versionadas</span></div>
+            <div class="node node-db"><b>PostgreSQL</b><span data-i18n="k17">migrations versionadas</span></div>
           </div>
-          <div class="arch-side"><span class="mono">Service ⇄ Asaas</span> cobrança criada pelo serviço; pagamento confirmado via webhook idempotente</div>
-          <figcaption class="mono">Arquitetura descrita no README do projeto</figcaption>
+          <div class="arch-side" data-i18n="k18"><span class="mono">Service ⇄ Asaas</span> cobrança criada pelo serviço; pagamento confirmado via webhook idempotente</div>
+          <figcaption class="mono" data-i18n="k19">Arquitetura descrita no README do projeto</figcaption>
         </figure>
 
         <ul class="feature-list reveal">
-          <li><b>RBAC</b> com três papéis: administrador do sistema, RH da empresa e colaborador.</li>
-          <li><b>Isolamento</b> por empresa (<code>company_id</code>) desde a camada de repositório.</li>
-          <li><b>Checkout</b> com gateway Asaas (sandbox) e ativação automática da assinatura.</li>
-          <li><b>Auditoria</b> das ações administrativas e dashboards por papel.</li>
+          <li data-i18n="k20"><b>RBAC</b> com três papéis: administrador do sistema, RH da empresa e colaborador.</li>
+          <li data-i18n="k21"><b>Isolamento</b> por empresa (<code>company_id</code>) desde a camada de repositório.</li>
+          <li data-i18n="k22"><b>Checkout</b> com gateway Asaas (sandbox) e ativação automática da assinatura.</li>
+          <li data-i18n="k23"><b>Auditoria</b> das ações administrativas e dashboards por papel.</li>
         </ul>
 
         <div class="feature-foot reveal">
           <p class="tags"><span>Go 1.25</span><span>Gin</span><span>pgx</span><span>PostgreSQL</span><span>React 19</span><span>TypeScript</span><span>Tailwind CSS</span><span>TanStack Query</span></p>
-          <a class="pill pill-lime magnetic" href="https://github.com/eduspv/Plataforma-Saude-Mental" target="_blank" rel="noopener">Ver código no GitHub <span aria-hidden="true">↗</span></a>
+          <a class="pill pill-lime magnetic" href="https://github.com/eduspv/Plataforma-Saude-Mental" target="_blank" rel="noopener" data-i18n="k24">Ver código no GitHub <span aria-hidden="true">↗</span></a>
         </div>
-        <p class="mono status reveal">Status: em desenvolvimento</p>
+        <p class="mono status reveal" data-i18n="k25">Status: em desenvolvimento</p>
       </div>
     </section>
 
     <!-- PROJETOS -->
     <section class="works" id="projetos">
       <div class="wrap">
-        <p class="mono label reveal">02 — Projetos</p>
+        <p class="mono label reveal" data-i18n="k26">02 — Projetos</p>
         <div class="works-head reveal">
-          <h2>Trabalhos<br><em>selecionados</em></h2>
+          <h2 data-i18n="k27">Trabalhos<br><em>selecionados</em></h2>
           <div class="filters" role="group" aria-label="Filtrar projetos" hidden>
-            <button type="button" data-f="todos" aria-pressed="true">Todos</button>
-            <button type="button" data-f="profissional" aria-pressed="false">Profissionais</button>
-            <button type="button" data-f="academico" aria-pressed="false">Acadêmicos</button>
-            <button type="button" data-f="pessoal" aria-pressed="false">Pessoais</button>
-            <button type="button" data-f="site" aria-pressed="false">Sites</button>
+            <button type="button" data-f="todos" aria-pressed="true" data-i18n="k28">Todos</button>
+            <button type="button" data-f="profissional" aria-pressed="false" data-i18n="k29">Profissionais</button>
+            <button type="button" data-f="academico" aria-pressed="false" data-i18n="k30">Acadêmicos</button>
+            <button type="button" data-f="pessoal" aria-pressed="false" data-i18n="k31">Pessoais</button>
+            <button type="button" data-f="site" aria-pressed="false" data-i18n="k32">Sites</button>
           </div>
         </div>
 
@@ -131,88 +133,88 @@
           <li class="row reveal" data-cat="profissional">
             <a href="https://www.sasbio.com.br" target="_blank" rel="noopener">
               <span class="row-n mono">01</span>
-              <span class="row-main"><span class="row-title">SASBIO</span><span class="row-desc">Site institucional da SASBIO: biossegurança hospitalar, biodescontaminação e saúde.</span></span>
-              <span class="row-meta mono"><span class="row-cat">Profissional</span><span>No ar · sasbio.com.br</span></span>
+              <span class="row-main"><span class="row-title">SASBIO</span><span class="row-desc" data-i18n="k41">Site institucional da SASBIO: biossegurança hospitalar, biodescontaminação e saúde.</span></span>
+              <span class="row-meta mono"><span class="row-cat" data-i18n="k33">Profissional</span><span data-i18n="k37">No ar · sasbio.com.br</span></span>
               <span class="row-go" aria-hidden="true">↗</span>
             </a>
           </li>
           <li class="row reveal" data-cat="profissional">
             <a href="https://rmadvassociados.com.br" target="_blank" rel="noopener">
               <span class="row-n mono">02</span>
-              <span class="row-main"><span class="row-title">RM Advogados Associados</span><span class="row-desc">Site institucional do escritório Ricardo Marques Advogados Associados.</span></span>
-              <span class="row-meta mono"><span class="row-cat">Profissional</span><span>No ar · rmadvassociados.com.br</span></span>
+              <span class="row-main"><span class="row-title">RM Advogados Associados</span><span class="row-desc" data-i18n="k42">Site institucional do escritório Ricardo Marques Advogados Associados.</span></span>
+              <span class="row-meta mono"><span class="row-cat" data-i18n="k33">Profissional</span><span data-i18n="k38">No ar · rmadvassociados.com.br</span></span>
               <span class="row-go" aria-hidden="true">↗</span>
             </a>
           </li>
           <li class="row reveal" data-cat="profissional">
             <a href="https://www.josericardomarques.com.br" target="_blank" rel="noopener">
               <span class="row-n mono">03</span>
-              <span class="row-main"><span class="row-title">José Ricardo Marques</span><span class="row-desc">Portfólio pessoal do empresário José Ricardo Marques.</span></span>
-              <span class="row-meta mono"><span class="row-cat">Profissional</span><span>No ar · josericardomarques.com.br</span></span>
+              <span class="row-main"><span class="row-title">José Ricardo Marques</span><span class="row-desc" data-i18n="k43">Portfólio pessoal do empresário José Ricardo Marques.</span></span>
+              <span class="row-meta mono"><span class="row-cat" data-i18n="k33">Profissional</span><span data-i18n="k39">No ar · josericardomarques.com.br</span></span>
               <span class="row-go" aria-hidden="true">↗</span>
             </a>
           </li>
           <li class="row reveal" data-cat="profissional">
             <a href="https://www.simoneazevdo.com.br" target="_blank" rel="noopener">
               <span class="row-n mono">04</span>
-              <span class="row-main"><span class="row-title">Simone Azevedo</span><span class="row-desc">Site de Simone Azevedo.</span></span>
-              <span class="row-meta mono"><span class="row-cat">Profissional</span><span>No ar · simoneazevdo.com.br</span></span>
+              <span class="row-main"><span class="row-title">Simone Azevedo</span><span class="row-desc" data-i18n="k44">Site de Simone Azevedo.</span></span>
+              <span class="row-meta mono"><span class="row-cat" data-i18n="k33">Profissional</span><span data-i18n="k40">No ar · simoneazevdo.com.br</span></span>
               <span class="row-go" aria-hidden="true">↗</span>
             </a>
           </li>
           <li class="row reveal" data-cat="pessoal">
             <a href="https://github.com/eduspv/Plataforma-Saude-Mental" target="_blank" rel="noopener">
               <span class="row-n mono">05</span>
-              <span class="row-main"><span class="row-title">SASBIO · Saúde Mental</span><span class="row-desc">Triagem de riscos psicossociais (NR-01), multi-tenant, com pagamentos por webhook.</span></span>
-              <span class="row-meta mono"><span class="row-cat">Pessoal</span><span>Go · React · PostgreSQL</span></span>
+              <span class="row-main"><span class="row-title" data-i18n="k45">SASBIO · Saúde Mental</span><span class="row-desc" data-i18n="k46">Triagem de riscos psicossociais (NR-01), multi-tenant, com pagamentos por webhook.</span></span>
+              <span class="row-meta mono"><span class="row-cat" data-i18n="k34">Pessoal</span><span>Go · React · PostgreSQL</span></span>
               <span class="row-go" aria-hidden="true">↗</span>
             </a>
           </li>
           <li class="row reveal" data-cat="pessoal">
             <a href="https://github.com/eduspv/roullete" target="_blank" rel="noopener">
               <span class="row-n mono">06</span>
-              <span class="row-main"><span class="row-title">Randomizer</span><span class="row-desc">Gerenciador de tarefas com Kanban e roleta: a roleta sorteia o que fazer a seguir, com o resultado definido e registrado no servidor.</span></span>
-              <span class="row-meta mono"><span class="row-cat">Pessoal</span><span>Go · Next.js · MongoDB</span></span>
+              <span class="row-main"><span class="row-title">Randomizer</span><span class="row-desc" data-i18n="k47">Gerenciador de tarefas com Kanban e roleta: a roleta sorteia o que fazer a seguir, com o resultado definido e registrado no servidor.</span></span>
+              <span class="row-meta mono"><span class="row-cat" data-i18n="k34">Pessoal</span><span>Go · Next.js · MongoDB</span></span>
               <span class="row-go" aria-hidden="true">↗</span>
             </a>
           </li>
           <li class="row reveal" data-cat="pessoal">
             <a href="https://github.com/eduspv/Chatbot-Whatsapp" target="_blank" rel="noopener">
               <span class="row-n mono">07</span>
-              <span class="row-main"><span class="row-title">Chatbot WhatsApp</span><span class="row-desc">Menu interativo com submenus; mensagens recebidas e enviadas via Twilio.</span></span>
-              <span class="row-meta mono"><span class="row-cat">Pessoal</span><span>Python · Flask · Twilio</span></span>
+              <span class="row-main"><span class="row-title">Chatbot WhatsApp</span><span class="row-desc" data-i18n="k48">Menu interativo com submenus; mensagens recebidas e enviadas via Twilio.</span></span>
+              <span class="row-meta mono"><span class="row-cat" data-i18n="k34">Pessoal</span><span>Python · Flask · Twilio</span></span>
               <span class="row-go" aria-hidden="true">↗</span>
             </a>
           </li>
           <li class="row reveal" data-cat="pessoal">
             <a href="https://github.com/eduspv/Deleting-Instagram-Bot" target="_blank" rel="noopener">
               <span class="row-n mono">08</span>
-              <span class="row-main"><span class="row-title">Instagram Cleaner Bot</span><span class="row-desc">Automação com Selenium que remove curtidas e comentários em lotes. Uso educacional.</span></span>
-              <span class="row-meta mono"><span class="row-cat">Pessoal</span><span>Python · Selenium</span></span>
+              <span class="row-main"><span class="row-title">Instagram Cleaner Bot</span><span class="row-desc" data-i18n="k49">Automação com Selenium que remove curtidas e comentários em lotes. Uso educacional.</span></span>
+              <span class="row-meta mono"><span class="row-cat" data-i18n="k34">Pessoal</span><span>Python · Selenium</span></span>
               <span class="row-go" aria-hidden="true">↗</span>
             </a>
           </li>
           <li class="row reveal" data-cat="site">
             <a href="https://github.com/eduspv/Anisio-David-Website" target="_blank" rel="noopener">
               <span class="row-n mono">09</span>
-              <span class="row-main"><span class="row-title">Site Anisio David</span><span class="row-desc">Site institucional moderno para escritório de advocacia.</span></span>
-              <span class="row-meta mono"><span class="row-cat">Site</span><span>React · shadcn-ui · Tailwind</span></span>
+              <span class="row-main"><span class="row-title" data-i18n="k50">Site Anisio David</span><span class="row-desc" data-i18n="k51">Site institucional moderno para escritório de advocacia.</span></span>
+              <span class="row-meta mono"><span class="row-cat" data-i18n="k35">Site</span><span>React · shadcn-ui · Tailwind</span></span>
               <span class="row-go" aria-hidden="true">↗</span>
             </a>
           </li>
           <li class="row reveal" data-cat="site">
             <a href="https://github.com/eduspv/Site-Ricardo-Marques" target="_blank" rel="noopener">
               <span class="row-n mono">10</span>
-              <span class="row-main"><span class="row-title">Site Ricardo Marques</span><span class="row-desc">Site institucional em HTML, CSS e JavaScript puros.</span></span>
-              <span class="row-meta mono"><span class="row-cat">Site</span><span>HTML · CSS · JavaScript</span></span>
+              <span class="row-main"><span class="row-title" data-i18n="k52">Site Ricardo Marques</span><span class="row-desc" data-i18n="k53">Site institucional em HTML, CSS e JavaScript puros.</span></span>
+              <span class="row-meta mono"><span class="row-cat" data-i18n="k35">Site</span><span>HTML · CSS · JavaScript</span></span>
               <span class="row-go" aria-hidden="true">↗</span>
             </a>
           </li>
           <li class="row reveal" data-cat="academico">
             <a href="https://github.com/eduspv/Study-Hub-Eduardo-Vidal-" target="_blank" rel="noopener">
               <span class="row-n mono">11</span>
-              <span class="row-main"><span class="row-title">Study Hub</span><span class="row-desc">Organização da trajetória na graduação: perfil, disciplinas, entregas e certificados.</span></span>
-              <span class="row-meta mono"><span class="row-cat">Acadêmico</span><span>Markdown · Git</span></span>
+              <span class="row-main"><span class="row-title">Study Hub</span><span class="row-desc" data-i18n="k54">Organização da trajetória na graduação: perfil, disciplinas, entregas e certificados.</span></span>
+              <span class="row-meta mono"><span class="row-cat" data-i18n="k36">Acadêmico</span><span>Markdown · Git</span></span>
               <span class="row-go" aria-hidden="true">↗</span>
             </a>
           </li>
@@ -223,39 +225,39 @@
     <!-- SOBRE -->
     <section class="about" id="sobre">
       <div class="wrap about-grid">
-        <p class="mono label reveal">03 — Sobre</p>
+        <p class="mono label reveal" data-i18n="k55">03 — Sobre</p>
         <div class="reveal">
-          <p class="about-big">Estudo <em>Ciência da Computação</em> no UniCEUB e gosto de criar soluções que resolvem problemas reais. Comecei como estagiário, fui efetivado como PJ em desenvolvimento de software e passei a responder diretamente pelas minhas entregas.</p>
+          <p class="about-big" data-i18n="k56">Estudo <em>Ciência da Computação</em> no UniCEUB e gosto de criar soluções que resolvem problemas reais. Comecei como estagiário, fui efetivado como PJ em desenvolvimento de software e passei a responder diretamente pelas minhas entregas.</p>
 
           <div class="about-cols">
             <div class="about-text">
-              <p>Minha trajetória profissional começou na <strong>SASBIO</strong>, em <strong>maio de 2024</strong>, como estagiário. No início, atuei no suporte tecnológico e operacional, ajudando a resolver problemas e a melhorar processos internos. Também trabalhei com <strong>Excel e Power BI</strong>, criando relatórios, dashboards e ferramentas de controle financeiro.</p>
-              <p>Com o tempo, passei a atuar no <strong>desenvolvimento web</strong>: participei da criação e da manutenção de sites com <strong>React</strong>, entre eles os institucionais da <strong>SASBIO</strong> e da <strong>RM Advogados Associados</strong>. Participei ainda da pesquisa e da avaliação de novas tecnologias para a empresa. Foi assim que entendi, na prática, como a tecnologia ajuda uma empresa a funcionar e a crescer.</p>
-              <p>Depois de <strong>2 anos de estágio</strong>, fui <strong>efetivado como PJ na área de desenvolvimento de software</strong>, função em que permaneci por cerca de <strong>6 meses</strong>. Nessa etapa, trabalhei no projeto de um <strong>SaaS para o monitoramento de escritórios para a NR-01</strong> (<a href="#destaque">veja o projeto em destaque</a>), atuando de forma individual e <strong>prestando contas</strong> diretamente pelas entregas.</p>
-              <p>Em paralelo, desenvolvo projetos pessoais e acadêmicos com Go, React, Vue.js, Laravel e bancos de dados relacionais e não relacionais. Daqui em diante, quero me aprofundar em <strong>segurança de software</strong>.</p>
+              <p data-i18n="k57">Minha trajetória profissional começou na <strong>SASBIO</strong>, em <strong>maio de 2024</strong>, como estagiário. No início, atuei no suporte tecnológico e operacional, ajudando a resolver problemas e a melhorar processos internos. Também trabalhei com <strong data-i18n="k68">Excel e Power BI</strong>, criando relatórios, dashboards e ferramentas de controle financeiro.</p>
+              <p data-i18n="k58">Com o tempo, passei a atuar no <strong>desenvolvimento web</strong>: participei da criação e da manutenção de sites com <strong>React</strong>, entre eles os institucionais da <strong>SASBIO</strong> e da <strong>RM Advogados Associados</strong>. Participei ainda da pesquisa e da avaliação de novas tecnologias para a empresa. Foi assim que entendi, na prática, como a tecnologia ajuda uma empresa a funcionar e a crescer.</p>
+              <p data-i18n="k59">Depois de <strong>2 anos de estágio</strong>, fui <strong>efetivado como PJ na área de desenvolvimento de software</strong>, função em que permaneci por cerca de <strong>6 meses</strong>. Nessa etapa, trabalhei no projeto de um <strong>SaaS para o monitoramento de escritórios para a NR-01</strong> (<a href="#destaque">veja o projeto em destaque</a>), atuando de forma individual e <strong>prestando contas</strong> diretamente pelas entregas.</p>
+              <p data-i18n="k60">Em paralelo, desenvolvo projetos pessoais e acadêmicos com Go, React, Vue.js, Laravel e bancos de dados relacionais e não relacionais. Daqui em diante, quero me aprofundar em <strong>segurança de software</strong>.</p>
             </div>
 
             <ol class="path" aria-label="Evolução profissional">
-              <li><span class="mono path-when">Mai 2024</span><b>Estágio na SASBIO</b><span>Suporte tecnológico e operacional; melhoria de processos internos.</span></li>
-              <li><span class="mono path-when">Dados</span><b>Excel e Power BI</b><span>Relatórios, dashboards e controle financeiro.</span></li>
-              <li><span class="mono path-when">Web</span><b>React e sites institucionais</b><span>SASBIO e RM Advogados Associados; pesquisa de novas tecnologias.</span></li>
-              <li><span class="mono path-when">2 anos</span><b>Estágio concluído</b><span>Da operação ao desenvolvimento web, sempre ampliando o escopo.</span></li>
-              <li><span class="mono path-when">PJ · ~6 meses</span><b>Efetivado em desenvolvimento de software</b><span>SaaS de monitoramento para a NR-01 (<a href="#destaque">SASBIO · Saúde Mental</a>), em projeto individual e com prestação de contas direta.</span></li>
-              <li class="path-next"><span class="mono path-when">Próximo</span><b>Segurança de software</b><span>Onde quero me aprofundar.</span></li>
+              <li><span class="mono path-when" data-i18n="k61">Mai 2024</span><b data-i18n="k66">Estágio na SASBIO</b><span data-i18n="k67">Suporte tecnológico e operacional; melhoria de processos internos.</span></li>
+              <li><span class="mono path-when" data-i18n="k62">Dados</span><b data-i18n="k68">Excel e Power BI</b><span data-i18n="k69">Relatórios, dashboards e controle financeiro.</span></li>
+              <li><span class="mono path-when">Web</span><b data-i18n="k70">React e sites institucionais</b><span data-i18n="k71">SASBIO e RM Advogados Associados; pesquisa de novas tecnologias.</span></li>
+              <li><span class="mono path-when" data-i18n="k63">2 anos</span><b data-i18n="k72">Estágio concluído</b><span data-i18n="k73">Da operação ao desenvolvimento web, sempre ampliando o escopo.</span></li>
+              <li><span class="mono path-when" data-i18n="k64">PJ · ~6 meses</span><b data-i18n="k74">Efetivado em desenvolvimento de software</b><span data-i18n="k900">SaaS de monitoramento para a NR-01 (<a href="#destaque">SASBIO · Saúde Mental</a>), em projeto individual e com prestação de contas direta.</span></li>
+              <li class="path-next"><span class="mono path-when" data-i18n="k65">Próximo</span><b data-i18n="k76">Segurança de software</b><span data-i18n="k77">Onde quero me aprofundar.</span></li>
             </ol>
           </div>
 
           <aside class="focus reveal" aria-label="Foco de aprofundamento">
-            <p class="mono">Onde quero me aprofundar</p>
-            <h3>Segurança <em>de software</em></h3>
-            <p>Quero construir sistemas que já nascem seguros. Na prática, isso já aparece nos meus projetos: autenticação com JWT, controle de acesso por papéis (RBAC), isolamento de dados por empresa e auditoria de ações. O próximo passo é estudar a fundo como proteger e testar o software que eu desenvolvo.</p>
+            <p class="mono" data-i18n="k78">Onde quero me aprofundar</p>
+            <h3 data-i18n="k79">Segurança <em>de software</em></h3>
+            <p data-i18n="k80">Quero construir sistemas que já nascem seguros. Na prática, isso já aparece nos meus projetos: autenticação com JWT, controle de acesso por papéis (RBAC), isolamento de dados por empresa e auditoria de ações. O próximo passo é estudar a fundo como proteger e testar o software que eu desenvolvo.</p>
           </aside>
 
           <dl class="facts mono">
-            <div><dt>Formação</dt><dd>Ciência da Computação, UniCEUB</dd></div>
-            <div><dt>Experiência</dt><dd>SASBIO: estágio de 2 anos (desde maio de 2024) e depois PJ em desenvolvimento, por cerca de 6 meses</dd></div>
-            <div><dt>Foco de estudo</dt><dd>Segurança de software</dd></div>
-            <div><dt>Linguagens</dt><dd>JavaScript, TypeScript, Python, Go, PHP, Java, C</dd></div>
+            <div><dt data-i18n="k81">Formação</dt><dd data-i18n="k85">Ciência da Computação, UniCEUB</dd></div>
+            <div><dt data-i18n="k82">Experiência</dt><dd data-i18n="k86">SASBIO: estágio de 2 anos (desde maio de 2024) e depois PJ em desenvolvimento, por cerca de 6 meses</dd></div>
+            <div><dt data-i18n="k83">Foco de estudo</dt><dd data-i18n="k76">Segurança de software</dd></div>
+            <div><dt data-i18n="k84">Linguagens</dt><dd>JavaScript, TypeScript, Python, Go, PHP, Java, C</dd></div>
           </dl>
         </div>
       </div>
@@ -264,16 +266,16 @@
     <!-- COMPETÊNCIAS -->
     <section class="skills" id="competencias">
       <div class="wrap">
-        <p class="mono label reveal">04 — Competências</p>
-        <h2 class="reveal">Ferramentas<br><em>que uso</em></h2>
+        <p class="mono label reveal" data-i18n="k87">04 — Competências</p>
+        <h2 class="reveal" data-i18n="k88">Ferramentas<br><em>que uso</em></h2>
         <div class="skill-grid">
-          <div class="skill reveal"><h3 class="mono">Linguagens</h3><ul><li>JavaScript</li><li>TypeScript</li><li>Python</li><li>Go</li><li>PHP</li><li>Java</li><li>C</li></ul></div>
-          <div class="skill reveal"><h3 class="mono">Frameworks e bibliotecas</h3><ul><li>React</li><li>Next.js</li><li>Node.js</li><li>Laravel</li><li>Gin</li><li>Flask</li><li>Tailwind CSS</li><li>Selenium</li></ul></div>
-          <div class="skill reveal"><h3 class="mono">Bancos de dados</h3><ul><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>SQLite</li></ul></div>
-          <div class="skill reveal"><h3 class="mono">Ferramentas</h3><ul><li>Git e GitHub</li><li>Docker</li><li>Postman / Insomnia</li><li>VS Code</li><li>Figma</li></ul></div>
-          <div class="skill reveal"><h3 class="mono">Conhecimentos</h3><ul><li>APIs REST</li><li>Autenticação JWT</li><li>Controle de acesso (RBAC)</li><li>HTML5 e CSS3</li></ul></div>
+          <div class="skill reveal"><h3 class="mono" data-i18n="k84">Linguagens</h3><ul><li>JavaScript</li><li>TypeScript</li><li>Python</li><li>Go</li><li>PHP</li><li>Java</li><li>C</li></ul></div>
+          <div class="skill reveal"><h3 class="mono" data-i18n="k89">Frameworks e bibliotecas</h3><ul><li>React</li><li>Next.js</li><li>Node.js</li><li>Laravel</li><li>Gin</li><li>Flask</li><li>Tailwind CSS</li><li>Selenium</li></ul></div>
+          <div class="skill reveal"><h3 class="mono" data-i18n="k90">Bancos de dados</h3><ul><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>SQLite</li></ul></div>
+          <div class="skill reveal"><h3 class="mono" data-i18n="k91">Ferramentas</h3><ul><li data-i18n="k93">Git e GitHub</li><li>Docker</li><li>Postman / Insomnia</li><li>VS Code</li><li>Figma</li></ul></div>
+          <div class="skill reveal"><h3 class="mono" data-i18n="k92">Conhecimentos</h3><ul><li>APIs REST</li><li data-i18n="k94">Autenticação JWT</li><li data-i18n="k95">Controle de acesso (RBAC)</li><li data-i18n="k96">HTML5 e CSS3</li></ul></div>
         </div>
-        <p class="mono note reveal">Lista baseada no meu perfil do GitHub e nos repositórios publicados.</p>
+        <p class="mono note reveal" data-i18n="k97">Lista baseada no meu perfil do GitHub e nos repositórios publicados.</p>
       </div>
     </section>
   </main>
@@ -281,8 +283,8 @@
   <!-- CONTATO -->
   <footer class="contact" id="contato">
     <div class="wrap">
-      <p class="mono label">05 — Contato</p>
-      <h2>Vamos<br><em>conversar?</em></h2>
+      <p class="mono label" data-i18n="k98">05 — Contato</p>
+      <h2 data-i18n="k99">Vamos<br><em>conversar?</em></h2>
       <a class="mail" href="mailto:eduardospvidal@gmail.com"><span>eduardospvidal</span><span>@gmail.com</span></a>
       <div class="contact-row">
         <a class="pill pill-lime magnetic" href="https://www.linkedin.com/in/eduardo-s-p-vidal/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
@@ -291,7 +293,7 @@
       <div class="foot mono">
         <span>Brasília · <time id="clock">--:--</time></span>
         <span>© <span id="ano">2026</span> Eduardo Serra Pierre Vidal</span>
-        <span>HTML · CSS · JS, sem frameworks</span>
+        <span data-i18n="k100">HTML · CSS · JS, sem frameworks</span>
       </div>
     </div>
   </footer>

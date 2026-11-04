@@ -54,6 +54,10 @@ h2 em { letter-spacing: -.03em; }
 .nav-links a:hover, .nav-links a.active { background: var(--paper-2); }
 .nav-links .nav-cta { background: var(--ink); color: var(--paper); }
 .nav-links .nav-cta:hover { background: var(--lime); color: var(--ink); }
+.lang-btn { display: inline-flex; align-items: center; gap: 0; margin-right: .6rem; padding: .25rem; background: transparent; border: 1.5px solid var(--ink); border-radius: 999px; cursor: pointer; color: var(--ink); }
+.lang-btn span { padding: .35rem .7rem; border-radius: 999px; font-size: .72rem; line-height: 1; transition: background .25s, color .25s; }
+.lang-btn span.on { background: var(--ink); color: var(--paper); }
+.lang-btn:hover span:not(.on) { background: var(--paper-2); }
 .menu-btn { display: none; background: var(--ink); color: var(--paper); border: 0; border-radius: 999px; padding: .65rem 1.1rem; cursor: pointer; }
 
 /* ---------- Botões ---------- */
@@ -224,6 +228,9 @@ section { position: relative; }
   .nav-links a:hover, .nav-links a.active { background: none; color: var(--lime); }
   .nav-links .nav-cta { color: var(--lime); }
   .menu-open .menu-btn { background: var(--lime); color: var(--ink); }
+  .lang-btn { position: relative; z-index: 130; margin-right: .5rem; }
+  .menu-open .lang-btn { border-color: var(--paper); color: var(--paper); }
+  .menu-open .lang-btn span.on { background: var(--lime); color: var(--ink); }
   .menu-open .logo span { color: var(--lime); }
   .menu-open .logo { position: relative; z-index: 130; }
   .menu-open .logo small { color: var(--paper); }
